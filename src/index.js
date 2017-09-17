@@ -34,16 +34,14 @@ ReactDOM.render(
             <MuiThemeProvider muiTheme={getMuiTheme(Theme)}>
             <ConnectedRouter history={createHistory()}>
                 <AppContainer>
-                    <Switch>
-                        <Route path={Routes.search.url} component={SearchContainer}/>
-                        <Route path={Routes.settings.url} component={SettingsContainer}/>
-                        <Route path={Routes.now.url} component={NowContainer}/>
-                        <Route path={Routes.hour.url} component={HourContainer}/>
-                        <Route path={Routes.week.url} component={WeekContainer} />
-                        <Route path={Routes.about.url} component={AboutContainer}/>
-                        <Route path={Routes.cookies.url} component={CookiesContainer}/>
-                        <Redirect exact from={Routes.home.url} to={Routes.search.url}/>
-                    </Switch>
+                        <Route exact path={Routes.search.url} component={SearchContainer}/>
+                        <Route exact path={Routes.settings.url} component={SettingsContainer}/>
+                        <Route exact path={Routes.now.url} component={NowContainer}/>
+                        <Route exact path={Routes.hour.url} component={HourContainer}/>
+                        <Route exact path={Routes.week.url} component={WeekContainer} />
+                        <Route exact path={Routes.about.url} component={AboutContainer}/>
+                        <Route exact path={Routes.cookies.url} component={CookiesContainer}/>
+                        <Redirect from={Routes.home.url} to={Routes.now.url} />
                 </AppContainer>
             </ConnectedRouter>
             </MuiThemeProvider>

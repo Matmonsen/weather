@@ -6,43 +6,43 @@ export const Routes = {
         push: '/'
     },
     now: {
-        url: 'now',
+        url: '/now',
         text: 'Now',
         translateKey: "now",
         push: '/Now'
     },
     search: {
-        url: 'search',
+        url: '/search',
         text: 'Search',
         translateKey: "search",
         push: '/Search'
     },
     hour: {
-        url: 'hour',
+        url: '/hour',
         text: 'Hour by Hour',
         translateKey: "hourByHour",
         push: '/Hour'
     },
     week: {
-        url: 'week',
+        url: '/week',
         text: 'Week',
         translateKey: "week",
         push: '/Week'
     },
     settings: {
-        url: 'settings',
+        url: '/settings',
         text: 'Settings',
         translateKey: "settings",
         push: '/Settings'
     },
     about: {
-        url: 'about',
+        url: '/about',
         text: 'About',
         translateKey: "about",
         push: '/About'
     },
     cookies: {
-        url: 'cookies',
+        url: '/cookies',
         text: 'Cookies',
         translateKey: "cookies",
         push: '/Cookies'

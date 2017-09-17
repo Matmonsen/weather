@@ -13,8 +13,8 @@ export class NavbarItem extends Component {
     render() {
 
         const { router } = this.context;
-        console.log("router",router)
-        const isActive = false;//router.isActive("/" + this.props.to, true);
+        console.log("roo", router)
+        const isActive = true;//router.isActive("/" + this.props.to, true);
 
         if (typeof this.props.usesLink !== 'undefined') {
 

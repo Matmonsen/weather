@@ -1,5 +1,5 @@
 import moment from 'moment';
-import {Routes} from "../routing/routes";
+import {Routes} from '../routing';
 import {fetchWeekly, fetchHourly} from "../redux/actions/weatherData";
 import {ForecastTypes, Api} from "../config";
 import axios from "axios";
@@ -179,17 +179,16 @@ export function loadDataInBackground (language, location, router,  dispatch, cal
             });
 }
 
-
 /**
  * Redirects a page to Search since it does not have any content
  * @param dispatch
- * @param router
+ * @param history
  */
-export function redirectToSearch(dispatch, router) {
+export function redirectToSearch(dispatch, history) {
     dispatch(stopLoading());
     dispatch(updateSearchQuery());
     dispatch(updateErrorMessage());
-    router.push(Routes.search.push);
+    history.push(Routes.search.push);
 }
 
 

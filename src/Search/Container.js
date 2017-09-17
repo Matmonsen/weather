@@ -3,7 +3,7 @@ import Search from "./Component";
 import {clearErrorMessage} from "../redux/actions/search";
 
 import {updateErrorMessage} from "../redux/actions/search";
-import {Routes} from "../routing";
+import {} from "../routing";
 import {fetchHourly} from "../redux/actions/weatherData";
 import {ForecastTypes, Api} from "../config";
 import axios from "axios";
@@ -13,6 +13,7 @@ import {FooterFilter} from "../redux/actionTypes";
 import {setFooterVisibliity} from "../redux/actions";
 import {stopLoading, startLoading} from "../redux/actions/loading";
 import {GoogleAnalyticsEventKeys, reportGoogleAnalyticsEvent} from "../utils/googleAnalytics";
+import {Routes} from "../routing/routes";
 
 /**
  * Redux method. Maps Redux store state to props.
@@ -54,8 +55,9 @@ function mapDispatchToProps(dispatch, ownProps) {
                     } else {
                         if (response.data.success) {
                             dispatch(fetchWeekly(response.data.data));
-                            if (ownProps.router.location.path !== Routes.now.url) {
-                                ownProps.router.push(Routes.home.push);
+                            console.log("own", ownProps)
+                            if (ownProps.location.pathname !== Routes.now.url) {
+                                ownProps.history.push(Routes.now.push);
                                 reportGoogleAnalyticsEvent(GoogleAnalyticsEventKeys.SearchQuery, location);
                                 dispatch(stopLoading());
                             }

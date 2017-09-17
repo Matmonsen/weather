@@ -4,6 +4,7 @@ import {updateErrorMessage ,updateSearchQuery} from "../redux/actions/search";
 import {getSearchQuery, loadDataInBackground, currentPathRequireWeatherData, searchQueryIsValid} from "../utils/utils";
 import {Routes} from "../routing/routes";
 import {reportGoogleAnalyticsEvent, GoogleAnalyticsEventKeys} from "../utils/googleAnalytics";
+import {withRouter} from "react-router";
 
 const mapStateToProps = (state, ownProps) => {
     let query = getSearchQuery(state.settings.location);
@@ -42,4 +43,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 };
 
-export const AppContainer = connect(mapStateToProps, mapDispatchToProps)(App);
+export const AppContainer = withRouter (connect(mapStateToProps, mapDispatchToProps)(App));

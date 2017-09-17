@@ -22,8 +22,8 @@ class Now extends Component {
         this.props.hideFooter(setFooterVisibliity(FooterFilter.HIDE_CREDIT));
     }
     componentWillReceiveProps(next) {
-        if (!next.loading)
-            this.props.showFooter();
+        //if (!next.loading)
+         //   this.props.showFooter();
     }
 
     render() {

@@ -27,7 +27,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         showFooter: () => dispatch(setFooterVisibliity(FooterFilter.SHOW_CREDIT)),
         hideFooter: () => dispatch(setFooterVisibliity(FooterFilter.HIDE_CREDIT)),
         redirectToSearch: () => {
-            redirectToSearch(dispatch, ownProps.router);
+            redirectToSearch(dispatch, ownProps.history);
         }
     }
 };
