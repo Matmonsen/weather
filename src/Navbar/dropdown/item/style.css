@@ -1,0 +1,5 @@
+li.dropdown-item {
+  list-style: none;
+  padding: 20px; }
+  li.dropdown-item:hover {
+    background-color: #AD1B59; }

@@ -1,0 +1,3 @@
+[submodule "public\\css\\yr-icons"]
+	path = public\\css\\yr-icons
+	url = git@github.com:Matmonsen/yr-icons.git

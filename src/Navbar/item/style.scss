@@ -1,0 +1,82 @@
+@import '../../media.scss';
+
+.navbar-item-highlight {
+    background-color: #AD1B59;
+}
+
+.navbar-item {
+    display: flex;
+    justify-content: center;
+    padding: 0 25px;
+    @include respond-to(xs) {
+        padding: 0 15px;
+    }
+
+    a {
+        color: white;
+        display: flex;
+        width: 100% !important;
+        align-items: center;
+        justify-content: center;
+        height:inherit;
+    }
+    span {
+        height:inherit;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    svg {
+        padding-right: 5px;
+        height: 30px !important;
+        width: 30px !important;
+        flex-shrink: 0 !important;
+
+        @include respond-to(xs) {
+            height: 30px !important;
+            width: 30px !important;
+        }
+        @include respond-to(sm) {
+            height: 35px !important;
+            width: 35px !important;
+        }
+        @include respond-to(md) {
+            height: 40px !important;
+            width: 40px !important;
+        }
+        @include respond-to(lg) {
+            height: 40px !important;
+            width: 40px !important;
+        }
+    }
+
+    div {
+
+        border: none !important;
+    }
+}
+
+.navbar-item-text {
+    padding-right: 10px;
+    @include respond-to(xs) {
+        display: none !important;
+    }
+    @include respond-to(sm) {
+        display: none !important;
+    }
+    @include respond-to(md) {
+        display: none !important;
+    }
+    @include respond-to(lg) {
+        display: inherit !important;
+    }
+}
+
+.navbar-item:hover {
+    background-color: #AD1B59;
+    cursor: pointer;
+}
+
+
+

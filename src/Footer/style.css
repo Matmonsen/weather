@@ -1,0 +1,8 @@
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #22282B !important; }
+  footer a {
+    color: #22282B; }
+  footer a:hover {
+    text-decoration: underline; }

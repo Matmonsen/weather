@@ -1,0 +1,19 @@
+$break-xs: 480px;
+$break-sm: 960px;
+$break-md: 1280px;
+
+
+@mixin respond-to($media) {
+    @if $media == xs {
+        @media only screen and (max-width: $break-xs) { @content; }
+    }
+    @else if $media == sm {
+        @media only screen and (min-width: $break-xs) and (max-width: $break-sm) { @content; }
+    }
+    @else if $media == md {
+        @media only screen and (min-width: $break-sm) and (max-width: $break-md) { @content; }
+    }
+    @else if $media == lg {
+        @media only screen and (min-width: $break-md) { @content; }
+    }
+}

@@ -1,0 +1,61 @@
+nav {
+    background: #22282B;
+    height: 60px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .nav-middle {
+        margin: 0;
+        color: white;
+        text-decoration: none;
+
+        @include respond-to(xs) {
+            font-size: 16px !important;
+        }
+        @include respond-to(sm) {
+            font-size: 20px !important;
+        }
+        @include respond-to(md) {
+            font-size: 30px !important;
+        }
+        @include respond-to(lg) {
+            font-size: 40px !important;
+        }
+    }
+
+    .nav-left {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .nav-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    div, & > div {
+        height:inherit;
+        align-items: center;
+
+        margin: 0 !important;
+    }
+}
+.center {
+    text-align: center;
+}
+
+.sidebar-close-right {
+    text-align: right;
+    width: 100% !important;
+}
+
+.menu-item-title {
+    cursor: default !important;
+    text-align: center;
+}

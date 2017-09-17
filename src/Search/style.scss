@@ -1,0 +1,72 @@
+@import '../media.scss';
+.search {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .search-button {
+        flex: 25%;
+        > button > div, > button > div > div  {
+            height: inherit !important;
+        }
+        > button > div > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .search-input {
+        flex: 75%;
+    }
+
+
+    @include respond-to(xs) {
+        width: 90% !important;
+
+        .search-button {
+            svg {
+                margin: 0 !important;
+                height: 40px !important;
+                width: 40px !important;
+            }
+            span {
+                display: none
+            }
+        }
+    }
+    @include respond-to(sm) {
+        width: 85% !important;
+
+        .search-button {
+            svg {
+                height: 40px !important;
+                width: 40px !important;
+            }
+            span {
+                display: none
+            }
+        }
+    }
+    @include respond-to(md) {
+        width: 70% !important;
+        .search-button {
+            svg {
+                height: 35px !important;
+                width: 35px !important;
+            }
+        }
+    }
+    @include respond-to(lg) {
+        width: 60% !important;
+        svg {
+            margin: 0 !important;
+            height: 35px !important;
+            width: 35px !important;
+        }
+    }
+    button {
+        background-color: #22282B !important;
+        height: 50px !important;
+    }
+}

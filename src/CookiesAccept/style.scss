@@ -1,0 +1,85 @@
+@import '../media.scss';
+
+.cookies-accept {
+    position: fixed;
+    background: #ad1b59;
+    height: auto;
+    width: 100%;
+    display: flex;
+    bottom: 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cookies-accept-content {
+    display: flex;
+    flex: 20%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cookies-accept-text {
+    padding: 25px 0 25px 25px;
+    flex: 80%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.cookies-accept-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    padding-right: 5px;
+
+    & > button {
+        padding: 0 !important;
+    }
+
+    @include respond-to(xs) {
+        & > button > div > svg {
+            height: 40px !important;
+            width: 40px !important;
+            top: 0;
+            right: 0;
+        }
+    }
+    @include respond-to(sm) {
+        & > button > div > svg {
+            height: 40px !important;
+            width: 40px !important;
+            top: 0;
+            right: 0;
+        }
+    }
+    @include respond-to(md) {
+        & > button > div > svg {
+            height: 40px !important;
+            width: 40px !important;
+            top: 0;
+            right: 0;
+        }
+    }
+    @include respond-to(lg) {
+
+
+        & > button > div > svg {
+            height: 40px !important;
+            width: 40px !important;
+            top: 0;
+            right: 0;
+        }
+    }
+
+}
+
+
+
+
+

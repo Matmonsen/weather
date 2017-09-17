@@ -1,0 +1,87 @@
+@import '../media.scss';
+@import '../Navbar/_navBar';
+
+/** Centers main content vertical **/
+body, html, #root, #root:first-child {
+    height: 100%;
+}
+#root > div:first-child {
+    display: flex !important;
+    justify-content: space-between;
+    min-height: 100%;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: flex !important;
+    flex: 1 !important;
+    align-items: center !important;
+    margin: 0 !important;
+    width: 100%;
+    @include respond-to(xs) {
+        justify-content: center !important;
+        h1 {
+            font-size: 40px;
+        }
+
+    }
+    @include respond-to(sm) {
+        justify-content: center !important;
+    }
+    @include respond-to(md) {
+        justify-content: center !important;
+    }
+    @include respond-to(lg) {
+        justify-content: center !important;
+    }
+
+
+
+    & > div {
+        margin: 0 !important;
+    }
+}
+header {
+    width: 100%;
+}
+/** Stop vertical center**/
+
+a {
+    color: #22282B;
+}
+
+body {
+    margin: 0;
+    background-color: #e9e9e9;
+    font-family: "Century Gothic", sans-serif;
+}
+
+
+h1 {
+    font-size: 4.2rem;
+    font-weight: 100;
+    margin: 0;
+}
+
+
+svg path{
+    color: white;
+}
+
+.active, .active > div {
+    background-color: #AD1B59 !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+$primary-color: #22282B;
+// Colors
+$navbar-color: #22282B;
+
+
+

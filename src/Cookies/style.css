@@ -1,0 +1,29 @@
+.cookies {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  .cookies h1 {
+    padding-bottom: 20px;
+    text-align: center; }
+  .cookies h2 {
+    padding-top: 20px;
+    text-align: center; }
+  .cookies .cookies-list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .cookies .cookies-list p {
+      padding: 5px;
+      margin: 0; }
+  .cookies .cookie-content {
+    padding-bottom: 20px; }
+  .cookies a:hover {
+    text-decoration: underline; }
+  @media only screen and (min-width: 960px) and (max-width: 1280px) {
+    .cookies {
+      width: 80%; } }
+  @media only screen and (min-width: 1280px) {
+    .cookies {
+      width: 75%; } }

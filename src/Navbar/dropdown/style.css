@@ -1,0 +1,9 @@
+.dropdown {
+  top: 10px;
+  right: 7px;
+  z-index: 99;
+  position: absolute;
+  width: auto;
+  height: auto;
+  color: white;
+  background-color: #22282B; }

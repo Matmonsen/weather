@@ -1,0 +1,48 @@
+.search {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .search .search-button {
+    flex: 25%; }
+    .search .search-button > button > div, .search .search-button > button > div > div {
+      height: inherit !important; }
+    .search .search-button > button > div > div {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+  .search .search-input {
+    flex: 75%; }
+  @media only screen and (max-width: 480px) {
+    .search {
+      width: 90% !important; }
+      .search .search-button svg {
+        margin: 0 !important;
+        height: 40px !important;
+        width: 40px !important; }
+      .search .search-button span {
+        display: none; } }
+  @media only screen and (min-width: 480px) and (max-width: 960px) {
+    .search {
+      width: 85% !important; }
+      .search .search-button svg {
+        height: 40px !important;
+        width: 40px !important; }
+      .search .search-button span {
+        display: none; } }
+  @media only screen and (min-width: 960px) and (max-width: 1280px) {
+    .search {
+      width: 70% !important; }
+      .search .search-button svg {
+        height: 35px !important;
+        width: 35px !important; } }
+  @media only screen and (min-width: 1280px) {
+    .search {
+      width: 60% !important; }
+      .search svg {
+        margin: 0 !important;
+        height: 35px !important;
+        width: 35px !important; } }
+  .search button {
+    background-color: #22282B !important;
+    height: 50px !important; }

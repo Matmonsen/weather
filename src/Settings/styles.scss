@@ -1,0 +1,54 @@
+@import '../media.scss';
+
+.settings {
+
+    width: 80%;
+    @include respond-to(xs) {
+        width: 100%;
+    }
+    > div > div > div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    & h1 {
+        text-align: center;
+    }
+
+
+    .settings-content {
+        padding-top: 30px !important;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+
+        @include respond-to(xs) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    path {
+        fill: black;
+    }
+
+    .settings-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include respond-to(xs) {
+            flex-direction: column;
+        }
+    }
+
+    .settings-column {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-around;
+
+    }
+}
+

@@ -1,0 +1,48 @@
+@import '../media.scss';
+
+.cookies {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    & h1 {
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    h2 {
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .cookies-list {
+        p {
+            padding: 5px;
+            margin: 0;
+        }
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .cookie-content {
+        padding-bottom: 20px;
+    }
+
+    & a:hover {
+        text-decoration: underline;
+    }
+
+    @include respond-to(md) {
+        width: 80%;
+    }
+
+    @include respond-to(lg) {
+        width: 75%;
+    }
+}
+
+
+

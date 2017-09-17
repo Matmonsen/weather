@@ -1,0 +1,11 @@
+.loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 50vh; }
+  .loading h1 {
+    text-align: center; }
+
+.loading-indicator {
+  position: relative !important; }
