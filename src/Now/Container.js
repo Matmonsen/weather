@@ -14,7 +14,7 @@ function mapStateToProps(state) {
     let location = {};
     if (state.weatherData.week.meta != null)
         location = state.weatherData.week.meta.location;
-    console.log("state", state.weatherData)
+
     return {
         forecast: findCurrentWeather(state.weatherData.week.forecasts, state.language.current),
         lastModified: state.weatherData.week.lastModified,

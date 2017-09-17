@@ -24,7 +24,7 @@ import { ConnectedRouter } from 'react-router-redux'
 import createHistory from 'history/createBrowserHistory'
 
 import registerServiceWorker from './registerServiceWorker';
-
+import './yr-icons/style.css'
 
 ReactGA.initialize(GoogleAnalyticsKey);
 

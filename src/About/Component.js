@@ -20,7 +20,7 @@ class About extends Component {
                     {Translate[this.props.language]["thisProjectServes3"]} <a href="https://facebook.github.io/react/" target="_blank">React (frontend)</a>.
 
                     <p>
-                        {Translate[this.props.language]["checkOutMainPage1"]} <a href={MainSite} target="_blank">{MainSite.substr(7, MainSite.length)}</a> {Translate[this.props.language]["checkOutMainPage2"]}
+                        {Translate[this.props.language]["checkOutMainPage1"]} <a href={MainSite} target="_blank">{MainSite}</a> {Translate[this.props.language]["checkOutMainPage2"]}
                     </p>
 
                     <p>

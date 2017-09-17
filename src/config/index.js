@@ -39,6 +39,6 @@ export const Cookies = {
 export const SourceCodeAPI = "https://github.com/Matmonsen/weather_api";
 export const SourceCodeAPP = "https://github.com/Matmonsen/weather";
 export const SourceCodeWEBFONT = "https://github.com/Matmonsen/yr-icons";
-export const MainSite = base;
+export const MainSite = "https://sindrenerdal.no";
 
 export default Theme;
