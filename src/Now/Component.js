@@ -1,25 +1,19 @@
 import React, {Component} from 'react';
-import {setFooterVisibliity} from '../redux/actions';
-import {FooterFilter} from '../redux/actionTypes';
 import SingleReport from '../Singlereport/Component';
 import {Translate} from "../i18n";
 import Loading from '../Loading';
+import {forecastIsInvalid} from "../utils/utils";
 
 class Now extends Component {
     componentDidMount() {
-
-
-        if (typeof this.props.forecast === "undefined"
-            || this.props.forecast === null
-            || typeof this.props.lastModified === "undefined"
-            || this.props.lastModified === null)
+        if (forecastIsInvalid(this.props.forecast, this.props.lastModified))
             this.props.redirectToSearch();
 
         this.props.showFooter();
     }
 
     componentWillUnmount() {
-        this.props.hideFooter(setFooterVisibliity(FooterFilter.HIDE_CREDIT));
+        this.props.hideFooter();
     }
     componentWillReceiveProps(next) {
         if (!next.loading)

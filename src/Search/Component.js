@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
-import ActionSearch from 'material-ui/svg-icons/action/accessibility';
+import ActionSearch from 'material-ui/svg-icons/action/search';
 import './style.css';
 import {Translate} from "../i18n";
 import Loading from '../Loading';

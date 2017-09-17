@@ -7,7 +7,6 @@ import { Provider } from 'react-redux';
 import Theme from "./config";
 import * as ReactGA from "react-ga";
 import {GoogleAnalyticsKey} from "./config/index";
-import {logPageView} from "./utils/googleAnalytics";
 
 import {Routes} from './routing';
 import AboutContainer from "./About";

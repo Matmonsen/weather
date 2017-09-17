@@ -2,15 +2,11 @@ import React, { Component } from 'react';
 import TableReport from '../Tablereport';
 import Loading from "../Loading";
 import './style.css';
-import moment from "moment";
+import {forecastIsInvalid} from "../utils/utils";
 
 class Hour extends Component {
     componentDidMount() {
-        if (typeof this.props.forecasts === "undefined"
-            || this.props.forecasts.length === 0
-            || typeof this.props.lastModified === "undefined"
-            || this.props.lastModified === null
-            || !moment().isSame(this.props.lastModified, 'day'))
+        if (forecastIsInvalid(this.props.forecasts, this.props.lastModified))
             this.props.redirectToSearch();
 
         this.props.showFooter();
@@ -19,6 +15,7 @@ class Hour extends Component {
     componentWillUnmount() {
         this.props.hideFooter();
     }
+
     componentWillReceiveProps(next) {
         if (!next.loading)
             this.props.showFooter();
@@ -34,7 +31,6 @@ class Hour extends Component {
                 <TableReport language={this.props.language} location={this.props.location} forecasts={this.props.forecasts} />
             </div>)
         }
-
     }
 }
 

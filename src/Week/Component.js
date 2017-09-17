@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
-
 import TableReport from '../Tablereport';
-import './style.css';
 import Loading from "../Loading";
-import moment from "moment";
+import './style.css';
+import {forecastIsInvalid} from "../utils/utils";
 
 class Week extends Component {
     componentDidMount() {
-        if (typeof this.props.forecasts === "undefined"
-            || this.props.forecasts.length === 0
-            || typeof this.props.lastModified === "undefined"
-            || this.props.lastModified === null
-            || !moment().isSame(this.props.lastModified, 'day'))
+        if (forecastIsInvalid(this.props.forecasts, this.props.lastModified))
             this.props.redirectToSearch();
 
         this.props.showFooter();
     }
+
     componentWillUnmount() {
         this.props.hideFooter();
     }

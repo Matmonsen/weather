@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import Language from 'material-ui/svg-icons/action/language';
-
-import ActionHome from 'material-ui/svg-icons/action/home';
+import ActionSearch from 'material-ui/svg-icons/action/search';
+import ActionSettings from 'material-ui/svg-icons/action/settings';
 import NavigationMenu from 'material-ui/svg-icons/navigation/menu';
 
 import {Routes} from "../routing";
@@ -90,13 +90,13 @@ class NavBar extends Component {
                 <nav>
                     <div className="nav-left">
                         <NavbarItem text={Translate[this.props.language]["menu"]} handleClick={this.openMenu.bind(this)}><NavigationMenu /></NavbarItem>
-                        <NavbarItem text={Translate[this.props.language][Routes.search.translateKey]} id="navbar-search"  handleClick={this.reRender.bind(this)} usesLink={true} to={Routes.search.url}><ActionHome /></NavbarItem>
+                        <NavbarItem text={Translate[this.props.language][Routes.search.translateKey]} id="navbar-search"  handleClick={this.reRender.bind(this)} usesLink={true} to={Routes.search.url}><ActionSearch /></NavbarItem>
                     </div>
 
                     <NavLink className="nav-middle" activeClassName="ignore" to={Routes.home.url}>{Translate[this.props.language]["title"]}</NavLink>
 
                     <div className="nav-right">
-                        <NavbarItem text={Translate[this.props.language][Routes.settings.translateKey]} id="navbar-settings"  handleClick={this.reRender.bind(this)} usesLink={true} to={Routes.settings.url} ><ActionHome /></NavbarItem>
+                        <NavbarItem text={Translate[this.props.language][Routes.settings.translateKey]} id="navbar-settings"  handleClick={this.reRender.bind(this)} usesLink={true} to={Routes.settings.url} ><ActionSettings /></NavbarItem>
                         <NavbarItem text={Translate[this.props.language]["language"]} handleClick={this.toggleLanguageDropdown.bind(this)}>
                             <Language />
                             <Dropdown show={this.state.showLanguages} handleClick={this.toggleLanguageDropdown.bind(this)}>

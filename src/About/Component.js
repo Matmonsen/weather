@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import './style.css';
 import {Translate} from "../i18n";
 import {MainSite, SourceCodeAPI, SourceCodeWEBFONT, SourceCodeAPP} from "../config";
+import './style.css';
 
 class About extends Component {
 

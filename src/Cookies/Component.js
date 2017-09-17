@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import './style.css';
 import {Translate} from "../i18n";
+import './style.css';
 
 class Cookies extends Component {
     componentDidMount() {

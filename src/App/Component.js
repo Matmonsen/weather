@@ -3,8 +3,8 @@ import {NavbarContainer} from '../Navbar/Container';
 import Footer from '../Footer';
 import CookiesAccept from '../CookiesAccept/Component';
 import {CheckForCacheReload} from '../config';
-import './style.css';
 import moment from "moment";
+import './style.css';
 
 class App extends Component {
 

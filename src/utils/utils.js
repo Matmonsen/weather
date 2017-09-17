@@ -193,3 +193,16 @@ export function redirectToSearch(dispatch, history) {
 }
 
 
+/**
+ * Returns a bool depending on if the forecasts can be used or not
+ * @param forecasts
+ * @param lastModified WHen the forecasts was last modified
+ * @returns {boolean}
+ */
+export function forecastIsInvalid(forecasts, lastModified) {
+    return typeof forecasts === "undefined"
+    || forecasts.length === 0
+    || typeof lastModified === "undefined"
+    || lastModified === null
+    || !moment().isSame(lastModified, 'day');
+}
