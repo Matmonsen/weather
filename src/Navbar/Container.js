@@ -3,6 +3,7 @@ import Navbar from "./Component";
 import {switchLanguage, setFooterVisibliity} from "../redux/actions";
 import {loadDataInBackground} from "../utils/utils";
 import {FooterFilter} from "../redux/actionTypes";
+import {withRouter} from "react-router";
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -23,4 +24,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     }
 };
 
-export const NavbarContainer = connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export const NavbarContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(Navbar));

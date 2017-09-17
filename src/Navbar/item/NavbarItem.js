@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './style.css';
 
 export class NavbarItem extends Component {
@@ -13,19 +13,19 @@ export class NavbarItem extends Component {
     render() {
 
         const { router } = this.context;
-        console.log("roo", router)
-        const isActive = true;//router.isActive("/" + this.props.to, true);
+
+        const isActive = this.props.to === router.history.location.pathname;
 
         if (typeof this.props.usesLink !== 'undefined') {
 
             return (
                 <div className={isActive ? "navbar-item navbar-item-highlight" : "navbar-item"} onClick={this.click.bind(this)}>
-                    <Link activeClassName="active" to={this.props.to}>
+                    <NavLink activeClassName="active" to={this.props.to}>
                         {this.props.children}
                         <span className="navbar-item-text">
                             {this.props.text}
                             </span>
-                    </Link>
+                    </NavLink>
                 </div>
             )
         }else

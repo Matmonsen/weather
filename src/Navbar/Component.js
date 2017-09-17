@@ -84,6 +84,7 @@ class NavBar extends Component {
     }
 
     render() {
+
         return (
             <header>
                 <nav>
@@ -92,7 +93,7 @@ class NavBar extends Component {
                         <NavbarItem text={Translate[this.props.language][Routes.search.translateKey]} id="navbar-search"  handleClick={this.reRender.bind(this)} usesLink={true} to={Routes.search.url}><ActionHome /></NavbarItem>
                     </div>
 
-                    <NavLink className="nav-middle" to={Routes.home.url}>{Translate[this.props.language]["title"]}</NavLink>
+                    <NavLink className="nav-middle" activeClassName="ignore" to={Routes.home.url}>{Translate[this.props.language]["title"]}</NavLink>
 
                     <div className="nav-right">
                         <NavbarItem text={Translate[this.props.language][Routes.settings.translateKey]} id="navbar-settings"  handleClick={this.reRender.bind(this)} usesLink={true} to={Routes.settings.url} ><ActionHome /></NavbarItem>
@@ -128,19 +129,19 @@ class NavBar extends Component {
                         primaryText={Translate[this.props.language]["menu"]}
                         disabled={true}
                         className="menu-item-title" />
-                    <NavLink to={Routes.now.url} activeClassName="active" onClick={this.closeMenu}  onTouchTap={this.closeMenu} >
+                    <NavLink to={Routes.now.url} onClick={this.closeMenu}  >
                         <MenuItem primaryText={Translate[this.props.language][Routes.now.translateKey]} />
                     </NavLink>
-                    <NavLink to={Routes.hour.url} activeClassName="active" onClick={this.closeMenu}  onTouchTap={this.closeMenu} >
+                    <NavLink to={Routes.hour.url} onClick={this.closeMenu}>
                         <MenuItem primaryText={Translate[this.props.language][Routes.hour.translateKey]} />
                     </NavLink>
-                    <NavLink to={Routes.week.url} activeClassName="active" onClick={this.closeMenu}  onTouchTap={this.closeMenu} >
+                    <NavLink to={Routes.week.url} onClick={this.closeMenu} >
                         <MenuItem primaryText={Translate[this.props.language][Routes.week.translateKey]} />
                     </NavLink>
-                    <NavLink to={Routes.about.url} activeClassName="active" onClick={this.closeMenu}  onTouchTap={this.closeMenu} >
+                    <NavLink to={Routes.about.url} onClick={this.closeMenu}  >
                         <MenuItem primaryText={Translate[this.props.language][Routes.about.translateKey]} />
                     </NavLink>
-                    <NavLink to={Routes.cookies.url} activeClassName="active" onClick={this.closeMenu}  onTouchTap={this.closeMenu} >
+                    <NavLink to={Routes.cookies.url} onClick={this.closeMenu}  >
                         <MenuItem primaryText={Translate[this.props.language][Routes.cookies.translateKey]} />
                     </NavLink>
                 </Drawer>

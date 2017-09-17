@@ -45,8 +45,6 @@ export function reportGoogleAnalyticsEvent(eventKey, label = null, value = null,
         action: GoogleAnalyticsEvents[eventKey].action
     };
 
-    console.log("e", eventKey, "l", label, "v", value, "n", nonInteraction, "t", transport)
-
     if (label !== null)
         event['label'] = label;
 

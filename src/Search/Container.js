@@ -55,7 +55,7 @@ function mapDispatchToProps(dispatch, ownProps) {
                     } else {
                         if (response.data.success) {
                             dispatch(fetchWeekly(response.data.data));
-                            console.log("own", ownProps)
+
                             if (ownProps.location.pathname !== Routes.now.url) {
                                 ownProps.history.push(Routes.now.push);
                                 reportGoogleAnalyticsEvent(GoogleAnalyticsEventKeys.SearchQuery, location);
