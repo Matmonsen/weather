@@ -122,13 +122,14 @@ class Search extends Component {
                 <Loading message={this.props.loadingMessage}/>
             </div>);
         }
+
         return (
                 <div className="search">
                         <TextField
                             className="search-textField"
                             hintText={Translate[this.props.language]["searchPlaceholder"]}
                             fullWidth={true}
-                            floatingLabelText={this.state.prefixFloat}
+                            floatingLabelText={this.state.prefixFloat.length === 0 ? Translate[this.props.language]["searchPlaceholder"] : this.state.prefixFloat}
                             errorText={this.state.errorMessage}
                             ref={(textField) => { this.textField = textField; }}
                             onKeyDown={this.enterListener.bind(this)}

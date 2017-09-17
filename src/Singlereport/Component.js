@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import moment from '../../node_modules/moment';
+import moment from 'moment/min/moment-with-locales.min'
 import './style.css'
 import {Translate} from "../i18n";
 

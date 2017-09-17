@@ -17,6 +17,9 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         switchLanguage: (language, location) => {
+            console.log("OWNB", language, location)
+
+
             dispatch(switchLanguage(language));
             dispatch(setFooterVisibliity(FooterFilter.HIDE_CREDIT));
             loadDataInBackground(language, location, ownProps.history, dispatch);

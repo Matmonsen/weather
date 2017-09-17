@@ -30,10 +30,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             if (searchQueryIsValid(location))
                 reportGoogleAnalyticsEvent(GoogleAnalyticsEventKeys.SavedLocation, location);
 
-            loadDataInBackground(language, location, ownProps.router, dispatch, null, () => {
+            loadDataInBackground(language, location, ownProps.history, dispatch, null, () => {
                 // Checks whether the user is on a page requiring weather data or not
-                if (currentPathRequireWeatherData(ownProps.router.location.pathname))
-                    ownProps.router.push(Routes.search.push)
+                if (currentPathRequireWeatherData(ownProps.location.pathname))
+                    ownProps.history.push(Routes.search.push)
             });
         },
 

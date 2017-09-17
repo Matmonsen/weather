@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import RefreshIndicator from 'material-ui/RefreshIndicator';
-import './style.css';
+import './style.scss';
 
 export class Loading extends Component {
     render () {

@@ -1,4 +1,4 @@
-import moment from 'moment';
+import moment from 'moment/min/moment-with-locales.min'
 import {Routes} from '../routing';
 import {fetchWeekly, fetchHourly} from "../redux/actions/weatherData";
 import {ForecastTypes, Api} from "../config";
@@ -91,14 +91,15 @@ export function searchQueryIsValid(query) {
  *
  * @param language The requested source language of the forecast
  * @param location The requested location of the forecast
- * @param router The react-router for navigation
+ * @param history The react-router history for navigation
  * @param dispatch Dispatch callback to update Redux storage.
  */
-export function loadDataInBackground (language, location, router,  dispatch, callbackSuccess = null, callbackFail = null) {
+export function loadDataInBackground (language, location, history,  dispatch, callbackSuccess = null, callbackFail = null) {
 
-    if (typeof router === "undefined")
+    if (typeof history === "undefined")
         return;
-    let currentLocation = router.route.location.pathname;
+
+    let currentLocation = history.location.pathname;
     // We always want to fetch weekly data first, because all presentations except Hour by Hour relies on it
     let forecastType = ForecastTypes.WEEK;
     if (currentLocation.indexOf(Routes.hour.url) !== -1) {
@@ -174,7 +175,7 @@ export function loadDataInBackground (language, location, router,  dispatch, cal
             }})
         .catch((err) => {
                 reportGoogleAnalyticsEvent(GoogleAnalyticsEventKeys.SearchingError, err);
-                redirectToSearch(dispatch, router);
+                redirectToSearch(dispatch, history);
                 dispatch(stopLoading())
             });
 }
