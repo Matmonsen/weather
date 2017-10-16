@@ -201,6 +201,7 @@ export function redirectToSearch(dispatch, history) {
  */
 export function forecastIsInvalid(forecasts, lastModified) {
     return typeof forecasts === "undefined"
+    || forecasts === null
     || forecasts.length === 0
     || typeof lastModified === "undefined"
     || lastModified === null
